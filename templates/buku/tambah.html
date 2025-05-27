@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Tambah Buku</h2>
+<form method="POST" action="/tambah">
+  <label>Judul:</label><br>
+  <input type="text" name="judul" required><br><br>
+
+  <label>Penulis:</label><br>
+  <select name="penulis_id" required>
+    {% for p in penulis %}
+      <option value="{{ p[0] }}">{{ p[1] }}</option>
+    {% endfor %}
+  </select><br><br>
+
+  <label>Penerbit:</label><br>
+  <select name="penerbit_id" required>
+    {% for pb in penerbit %}
+      <option value="{{ pb[0] }}">{{ pb[1] }}</option>
+    {% endfor %}
+  </select><br><br>
+
+  <label>Tahun Terbit:</label><br>
+  <input type="number" name="tahun_terbit" required><br><br>
+
+  <label>ISBN:</label><br>
+  <input type="text" name="isbn" required><br><br>
+
+  <label>Stok:</label><br>
+  <input type="number" name="stok" required><br><br>
+
+  
+  <input type="submit" value="simpan">
+</form>
+</form>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Daftar Penerbit</title>
+</head>
+<body>
+    <h1>Daftar Penerbit</h1>
+    <table border="1">
+        {% if penerbit_list %}
+        <tr>
+            <th>ID</th>
+            <th>Nama Penerbit</th>
+        </tr>
+        {% for penerbit in penerbit_list %}
+        <tr>
+            <td>{{ penerbit[0] }}</td>
+            <td>{{ penerbit[1] }}</td>
+        </tr>
+        {% endfor %}
+        {% else %}
+        <tr><td colspan="2">Tidak ada data penerbit</td></tr>
+        {% endif %}
+    </table>
+</body>
+</html>
