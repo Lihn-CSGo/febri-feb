@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tambah Penerbit</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/style_tmbh.css')}}"/>
+</head>
+<body>
+<div class="form-container">    
+    <form method="post">
+        <label>ID:</label><br>
+        <input type="text" name="id"><br>
+        <label>Nama:</label><br>
+        <input type="text" name="nama"><br><br>
+        <button type="submit">Simpan</button>
+        <a href="{{ url_for('penerbit') }}">Kembali ke Data Penerbit</a>
+    </form>
+</div>    
+</body>
+</html>

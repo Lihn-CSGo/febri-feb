@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head><title>Data Penerbit</title></head>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style_mhs.css') }}"/>
+<body>
+    <h2>Data Penerbit</h2>
+    <a href="{{ url_for('tambah_penerbit') }}">Tambah Penerbit</a> |
+    <a href="{{ url_for('dashboard') }}">Kembali ke Dashboard</a>
+    <br><br>
+    <table border="1">
+        <tr>
+            <th>ID</th><th>Nama</th><th>Aksi</th>
+        </tr>
+        {% for p in penerbit %}
+        <tr>
+            <td>{{ p.id }}</td>
+            <td>{{ p.nama }}</td>
+            <td>
+                <a href="{{ url_for('hapus_penerbit', id=p.id) }}">Hapus</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

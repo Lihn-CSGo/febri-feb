@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tambah Buku</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style_mhs.css') }}"/>
+</head>
+<body> 
+<div class="table-container">
+    <h2>Daftar Buku</h2>
+    <a href="{{ url_for('tambah_buku') }}">
+        <button>+ Tambah Buku</button>
+    </a>
+    
+<table border="1">
+  <tr>
+    <th>Judul</th>
+    <th>Penulis</th>
+    <th>Penerbit</th>
+    <th>Mahasiswa</th>
+  </tr>
+  {% for b in buku %}
+  <tr>
+    <td>{{ b.judul }}</td>
+    <td>{{ b.penulis.nama }}</td>
+    <td>{{ b.penerbit.nama }}</td>
+    <td>{{ b.mahasiswa.nama }}</td>
+  </tr>
+{% endfor %}
+</tbody>
+</table>
+<a href="{{ url_for('dashboard') }}">Kembali ke Dashboard</a>
+</div>
+</body>
+</html>

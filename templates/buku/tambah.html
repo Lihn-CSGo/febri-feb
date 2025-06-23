@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tambah Buku</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/style_tmbh.css')}}"/>
+  </head>
+<body>
+<div class="form-container">
+<form method="POST">
+  <label>Judul Buku:</label>
+  <input type="text" name="judul" required><br><br>
+
+  <label>Penulis:</label>
+  <select name="id_penulis">
+    {% for p in penulis %}
+      <option value="{{ p.id }}">{{ p.nama }}</option>
+    {% endfor %}
+  </select><br><br>
+
+  <label>Penerbit:</label>
+  <select name="id_penerbit">
+    {% for p in penerbit %}
+      <option value="{{ p.id }}">{{ p.nama }}</option>
+    {% endfor %}
+  </select><br><br>
+
+  <label>Mahasiswa:</label>
+  <select name="mahasiswa_id">
+    {% for m in mahasiswa %}
+      <option value="{{ m.id }}">{{ m.nama }}</option>
+    {% endfor %}
+  </select><br><br>
+
+  <button type="submit">Tambah Buku</button>
+  <a href="{{ url_for('buku') }}">Kembali</a>
+</form>
+</div>
+</body>
+</html>

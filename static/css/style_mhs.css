@@ -1,0 +1,99 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('https://i.pinimg.com/736x/d0/c1/6c/d0c16cc309abaf0b75db91b810b696ec.jpg'); /* link pinterest gambar PNG Anda */
+    background-size: cover; /* Untuk memastikan gambar menutupi seluruh layar */
+    background-repeat: no-repeat; /* Agar gambar tidak diulang */
+    image-rendering: auto;
+    height: 100%;
+    margin: 20px;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+h2{
+    text-align: center;
+    color: white;
+}
+
+h1{
+    border: 15px;
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 30px;
+}
+
+form label {
+    display: block;
+    margin-top: 15px;
+    color: #333;
+    font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="number"],
+form input[type="email"],
+form select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form input[type="submit"],
+button {
+    background-color: #f8c2a9;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover,
+button:hover {
+    background-color: #f8c2a9;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    backdrop-filter: blur(15px);
+}
+
+table th,
+table td {
+    padding: 12px;
+    border: 1px solid #ffffff;
+    text-align: center;
+    font-weight: bold;
+
+}
+
+table th {
+    background-color: #f8c2a9;
+    color: white;
+}
+
+a{
+     width: 100%;
+      height: 35px;
+      background-color: #f8c2a9;
+      color: #ffffff;
+      padding: 10px;
+      border: none;
+      border-radius: 100px;
+      cursor: pointer;
+}
+

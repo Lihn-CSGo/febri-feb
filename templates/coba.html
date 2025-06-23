@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang ="id">
+
+<head>
+    <meta charset="UTF-8">
+    <title>User</title>
+    <style>
+            body {
+                background-image: url('https://i.pinimg.com/736x/d0/c1/6c/d0c16cc309abaf0b75db91b810b696ec.jpg'); /* link pinterest gambar PNG Anda */
+                background-size: cover; /* Untuk memastikan gambar menutupi seluruh layar */
+                background-repeat: no-repeat; /* Agar gambar tidak diulang */
+                image-rendering: auto;
+                height: 100%;
+                }
+
+            header{
+                border: 15px;
+                padding: 15px;
+                width: auto;
+                background-color: rgb(220, 229, 236);
+                border-radius: 10px;
+                margin: auto;
+                text-align: center;
+                font-weight: bolder;
+                font-family: 'Times New Roman', Times, serif;
+            }
+        </style>
+    </head>
+
+    <head>
+        <header>Pengguna</header>
+    <div class="container">   
+        <div class="card">
+                <link rel="stylesheet" href="{{ url_for('static', filename='css/style_card.css') }}"/>
+                <img src="{{url_for('static', filename='images/avatar2.jpg')}}" 
+                    style="width: 250px; height: 250px; object-fit: cover; margin: 50px auto;">
+                    <div class="card-content">
+                        <h2 class="card-title">Febrian Dwi Saputra</h2>
+                        <p class="card-text">Manajemen Informatika/semester 2</p>
+                    </div>
+                    <div class="card-button">
+                        <a href="index.html" class="btn">selengkapnya →</a>
+                    </div>
+                
+        </div>          
+</body>
+
+

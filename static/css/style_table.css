@@ -1,0 +1,32 @@
+.container{
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    align-items: flex-start;
+}
+
+.table-container{
+    flex: 2;
+    overflow-x:auto;
+}
+
+table{
+    border-collapse: collapse;
+    width: 100%;
+    margin-right: 10px;
+    background-color: #d4b8b8;
+}
+
+th, td{
+    border:1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    backdrop-filter: blur(10px);
+}
+
+th {
+    background-color: #aec3e4;
+    color: white;
+}

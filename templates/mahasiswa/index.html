@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Data Mahasiswa</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 20px;
+            
+        }
+        th, td {
+            border: 1px solid #ffffff;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #eee;
+        }
+    </style>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style_mhs.css') }}"/>
+</head>
+<body>
+<div class="table-container">    
+    <h1>Data Mahasiswa</h1>
+    <a href="/tambah">Tambah Mahasiswa</a>
+    <a href="{{ url_for('dashboard')}}">kembali</a>
+    
+    {% if mahasiswa %}
+    <table border ="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nama</th>
+                <th>Jurusan</th>
+                <th>aksi</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for mhs in mahasiswa %}
+            <tr>
+                <td>{{ mhs.id }}</td>
+                <td>{{ mhs.nama }}</td>
+                <td>{{ mhs.jurusan }}</td>
+                <td>
+                    <form action="{{ url_for('hapus', id=mhs.id) }}" method="POST" onsubmit="return confirm('Yakin hapus data ini?');">
+                    <button type="submit">Hapus</button></form>
+                 </td>
+            </tr>
+    </td>
+</tr>
+{% endfor %}
+</tbody>
+    </table>
+    {% else %}
+    <p>Belum ada data mahasiswa.</p>
+    {% endif %}
+</div>    
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tambah Penulis</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/style_tmbh.css')}}"/>
+</head>
+<body>
+<div class="form-container">
+    <form method="POST">
+        
+        <label>Nama Penulis:</label><br>
+        <input type="text" name="nama" required><br><br>
+
+        <label>id:</label><br>
+        <input type="number" name="id" required><br><br>
+    
+        <input type="submit" value="Simpan">
+        <a href="{{ url_for('penulis') }}">Kembali ke Data Penulis</a>
+    </form>
+</div> 
+</body>
+</html>
